@@ -1,21 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <PublishIISAssets>false</PublishIISAssets>
     <PublishRelease>true</PublishRelease>
-    <PublishSingleFile>true</PublishSingleFile>
+    <!-- <PublishSingleFile>true</PublishSingleFile> -->
     <PublishTrimmed>true</PublishTrimmed>
     <!--<PublishReadyToRun>true</PublishReadyToRun>-->
-    <!--<PublishAot>true</PublishAot>-->
+    <PublishAot>true</PublishAot>
     <TrimMode>full</TrimMode>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(PublishAot)' == 'true'">
     <!-- Documented trimming settings (tweaks) -->
-    <InvariantGlobalization>true</InvariantGlobalization>
+    <!-- <InvariantGlobalization>true</InvariantGlobalization> -->
     <!-- Undocumented trimming settings (hacks) -->
     <!--<IlcGenerateStackTraceData>false</IlcGenerateStackTraceData>-->
     <!--<IlcOptimizationPreference>Size</IlcOptimizationPreference>-->

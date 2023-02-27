@@ -28,22 +28,5 @@ if (Environment.GetEnvironmentVariable("SHUTDOWN_ON_START") != "true")
 }
 else
 {
-    if (Environment.GetEnvironmentVariable("SUPPRESS_FIRST_REQUEST") != "true")
-    {
-        {
-            using var http = new HttpClient();
-            var response = await http.GetAsync($"http://localhost:{port}");
-            response.EnsureSuccessStatusCode();
-        }
-
-        Console.Write("FirstRequestComplete,");
-        Console.WriteLine(DateTime.UtcNow.Ticks);
-
-        Console.Write("Environment.WorkingSet,");
-        Console.Write(DateTime.UtcNow.Ticks);
-        Console.Write(",");
-        Console.WriteLine(Environment.WorkingSet);
-    }
-
     await host.StopAsync();
 }
