@@ -3,7 +3,7 @@ var port = 5000;
 var host = new WebHostBuilder()
     .UseKestrel(c => c.ListenLocalhost(port))
     .UseEnvironment(Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production")
-    //.ConfigureServices(services => services.AddRouting())
+    //.ConfigureServices(services => services.AddRoutingCore())
     .Configure(app =>
     {
         app.Run(context => context.Response.WriteAsync("Hello World!"));
